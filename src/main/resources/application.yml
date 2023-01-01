@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/jpashop?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: tiger
+
+  jpa:
+    hibernate:
+      ddl-auto: create  # app실행시 테이블 다 지우고 entity보고 다시 생성
+    properties:
+      hibernate:
+#        show_sql: true  # sout으로 sql문을 출력해주는 것(개발할 때만 사용하고 나중에는 지워야 하는 코드)
+        format-sql: true
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug  # sql문을 logging을 통해서 보여주는 것
+    org.hibernate.type: trace
+
