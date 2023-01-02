@@ -1,0 +1,12 @@
+# test폴더에 yml파일을 만들면 우선적으로 해당 파일을 적용
+# spring boot에서는 따로 DB설정을 안해주면, 기본적으로 메모리 모드로 실행
+# DB에 연결이 안되어 있어도 테스트가 가능하다는 것
+
+spring:
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug  # sql문을 logging을 통해서 보여주는 것
+    org.hibernate.type: trace
+
