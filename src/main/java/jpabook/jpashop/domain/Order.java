@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain;
 
+import com.querydsl.core.annotations.QueryProjection;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,7 +35,6 @@ public class Order {
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
-
 
 //    연관관계 편의 메서드
     public void setMember(Member member) {
